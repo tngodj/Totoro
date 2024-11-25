@@ -193,27 +193,44 @@
         background-color: #555;
     }
 
-    /* Bottom Poster Grid Section */
+/* 하단 포스터 그리드 */
     .bottom-poster-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      padding: 20px;
-      max-width: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* 가운데 정렬 */
+        gap: 20px; /* 포스터 간 간격 */
+        padding: 20px;
+        max-width: 900px; /* 그리드 너비 제한 */
+        margin: 0 auto; /* 양쪽 여백 균등 */
     }
 
     .bottom-poster-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 2px solid #e5d9b9;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+        width: calc(25% - 20px); /* 포스터 크기 비율 조정 */
+        height: auto;
+        border-radius: 8px;
+        border: 2px solid #e5d9b9;
+        cursor: pointer;
+        transition: transform 0.3s ease;
     }
 
     .bottom-poster-grid img:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
+
+      /* 숨겨진 행 */
+    .hidden-row {
+        display: none; /* 초기 상태에서 숨김 */
+    }
+    .more-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
 
     /* Hidden poster for "Show More" functionality
     .hidden-poster {
@@ -236,7 +253,7 @@
         This is a captivating story set in a world of fantasy and adventure. Join the protagonist as they journey through magical landscapes, encounter mystical creatures, and learn valuable lessons about friendship, bravery, and the importance of nature.
       </div>
       <div>
-        <a href="https://www.netflix.com/kr/title/60027393?source=35" id="netflix-link" class="poster-link" target="_blank">넷플릭스</a>
+        <a href="https://www.netflix.com/kr/title/60032294" id="netflix-link" class="poster-link" target="_blank">넷플릭스</a>
         <a href="#" id="wavve-link" class="poster-link" target="_blank">웨이브</a>
         <a href="#" id="watcha-link" class="poster-link" target="_blank">왓챠</a>
       </div>
@@ -244,14 +261,6 @@
   
     <!-- Divider Line (Horizontal) -->
     <div class="divider-horizontal"></div>
-  
-    <!-- Character Intro Section -->
-    <div class="character-section">
-      <img id="character-image" src="7.jpg" alt="Character Image">
-      <div class="character-intro" id="character-intro">
-        This character is the heart and soul of our story, bringing warmth, courage, and adventure into every scene. With a gentle spirit and strong resolve, they remind us of the timeless values of friendship, nature, and harmony.
-      </div>
-    </div>
   
     <!-- Character Cards Section -->
     <div class="character-container">
@@ -261,8 +270,8 @@
           <img src="토토로 4.png" alt="Character 1">
         </a>
         <div class="character-details">
-          <div class="character-name">아펠리오스</div>
-          <div class="character-role">타곤</div>
+          <div class="character-name">토토로</div>
+          <div class="character-role">귀요미</div>
           <a href="sub-guide.html" target="_blank" class="view-link">살펴보기</a>
         </div>
       </div>
@@ -271,8 +280,8 @@
           <img src="character2.jpg" alt="Character 2">
         </a>
         <div class="character-details">
-          <div class="character-name">Character 2</div>
-          <div class="character-role">Role 2</div>
+          <div class="character-name">메이</div>
+          <div class="character-role">어린애</div>
           <a href="https://example.com/character2" target="_blank" class="view-link">살펴보기</a>
         </div>
       </div>
@@ -281,8 +290,8 @@
           <img src="character3.jpg" alt="Character 3">
         </a>
         <div class="character-details">
-          <div class="character-name">Character 3</div>
-          <div class="character-role">Role 3</div>
+          <div class="character-name">사스키</div>
+          <div class="character-role">메이 언니</div>
           <a href="https://example.com/character3" target="_blank" class="view-link">살펴보기</a>
         </div>
       </div>
@@ -291,8 +300,8 @@
           <img src="character4.jpg" alt="Character 4">
         </a>
         <div class="character-details">
-          <div class="character-name">Character 4</div>
-          <div class="character-role">Role 4</div>
+          <div class="character-name">타츠오</div>
+          <div class="character-role">메이,사스키 아빠</div>
           <a href="https://example.com/character4" target="_blank" class="view-link">살펴보기</a>
         </div>
       </div>
@@ -301,22 +310,22 @@
           <img src="character5.jpg" alt="Character 5">
         </a>
         <div class="character-details">
-          <div class="character-name">Character 5</div>
-          <div class="character-role">Role 5</div>
+          <div class="character-name">야스코</div>
+          <div class="character-role">타츠오 아내</div>
           <a href="https://example.com/character5" target="_blank" class="view-link">살펴보기</a>
         </div>
       </div>
     </div>
   
     <!-- Hidden Row for Additional Characters -->
-    <div class="character-container hidden-row">
+    <div class="character-container hidden-row extra-characters">
       <div class="character-card">
         <a href="https://example.com/character6" target="_blank">
           <img src="character6.jpg" alt="Character 6">
         </a>
         <div class="character-details">
-          <div class="character-name">Character 6</div>
-          <div class="character-role">Role 6</div>
+          <div class="character-name">칸타</div>
+          <div class="character-role">사스키 짝남</div>
           <a href="https://example.com/character6" target="_blank" class="view-link">살펴보기</a>
         </div>
       </div>
@@ -324,84 +333,153 @@
   
     <!-- Show More Button -->
     <div style="text-align: center; margin-top: 20px;">
-      <button class="show-more" onclick="showMore()">더보기</button>
+      <button class="show-more" id="show-more-extra-characters" onclick="showMore('extra')">더보기</button>
     </div>
   
     <!-- Divider Line (Horizontal) -->
     <div class="divider-horizontal"></div>
   
-    <!-- Bottom Poster Grid Section -->
-    <div class="bottom-poster-grid" id="poster-grid">
-      <img src="totoro.jpeg" alt="Poster 1" onclick="changeMainPoster(0)">
-      <img src="cat.jpg" alt="Poster 2" onclick="changeMainPoster(1)">
-      <img src="haul.jpg" alt="Poster 3" onclick="changeMainPoster(2)">
-      <img src="sen.jpg" alt="Poster 4" onclick="changeMainPoster(3)">
-    </div>
+<!-- Bottom Poster Grid Section -->
+<div class="bottom-poster-grid" id="poster-grid">
+  <img src="totoro.jpeg" alt="Poster 1" onclick="changeMainPoster(0)">
+  <img src="cat.jpg" alt="Poster 2" onclick="changeMainPoster(1)">
+  <img src="haul.jpg" alt="Poster 3" onclick="changeMainPoster(2)">
+  <img src="sen.jpg" alt="Poster 4" onclick="changeMainPoster(3)">
+</div>
 
-    <!-- Show More Posters -->
-  <div class="bottom-poster-grid hidden-row" id="extra-poster">
-    <img src="laputa.jpg" alt="Extra Poster">
-  </div>
-  <button class="show-more" onclick="showMore()">더보기</button>
-  </div>
+<!-- Show More Posters -->
+<div class="bottom-poster-grid hidden-row" id="extra-poster">
+  <img src="laputa.jpg" alt="천공의 성 라퓨타" onclick="changeMainPoster(4)">
+</div>
+<div style="text-align: center; margin-top: 20px;">
+  <button class="show-more" id="show-more-bottom-posters" onclick="showMore('bottom')">더보기</button>
+</div>
 
 <script>
-  function showMore() {
-            const hiddenRow = document.querySelector('.hidden-row');
-            hiddenRow.style.display = 'grid';
-            const button = document.querySelector('.show-more');
-            button.style.display = 'none'; // 버튼 숨김
-        }
+  //function showMore() {
+  //  const hiddenRows = document.querySelectorAll('.hidden-row');
+  //  hiddenRows.forEach(row => (row.style.display = 'flex')); // 숨겨진 모든 행 표시
+  //  const buttons = document.querySelectorAll('.show-more');
+  //  buttons.forEach(button => (button.style.display = 'none')); // 더보기 버튼 숨김
+  //}
+  
   // Poster data array
+  // 포스터 데이터 배열
+
+  function showMore(section) {
+  if (section === 'bottom') {
+    // 하단 포스터를 위한 더보기 버튼
+    const bottomHiddenRows = document.querySelectorAll('#extra-poster');
+    bottomHiddenRows.forEach(row => (row.style.display = 'flex')); // 하단 포스터 표시
+    document.getElementById('show-more-bottom-posters').style.display = 'none'; // 버튼 숨김
+  } else if (section === 'extra') {
+    // 추가 캐릭터를 위한 더보기 버튼
+    const extraHiddenRows = document.querySelectorAll('.hidden-row.extra-characters');
+    extraHiddenRows.forEach(row => (row.style.display = 'flex')); // 추가 캐릭터 표시
+    document.getElementById('show-more-extra-characters').style.display = 'none'; // 버튼 숨김
+  }
+}
+
   let posters = [
-    { title: 'Poster 1 Title', mainPosterSrc: '3.webp', characterImageSrc: '2.jpg', characterIntroText: 'This is the story of character 1, filled with courage and kindness.', description: 'A tale of adventure and heartwarming friendship unfolds with character 1 as they brave unknown lands.',
-     netflixLink: 'https://www.netflix.com/kr/title/60027393?source=35',
-      wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011316&autoplay=y'},
-    { title: 'Poster 2 Title', mainPosterSrc: '4.jpeg', characterImageSrc: '6.jpg', characterIntroText: 'Character 2 embarks on a mystical journey that changes everything.', description: 'Follow character 2 as they embark on a journey filled with wonder and discovery.',
-     netflixLink: 'https://www.netflix.com/kr/title/70028883?source=35',
-     wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011324&autoplay=y',
-     watchaLink: 'https://watcha.com/ko-KR/contents/mJOV1RW?utm_campaign=metadata&utm_source=google&utm_medium=search'},
-    { title: 'Poster 3 Title', mainPosterSrc: '5.jpg', characterImageSrc: '9.jpg', characterIntroText: 'In a world of dreams, character 3 discovers a hidden truth.', description: 'Character 3 uncovers hidden secrets that lead them to a deeper understanding of their world.',
-    netflixLink: 'https://www.netflix.com/kr/title/70106454?source=35',
-    wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011305&autoplay=y',
-    watchaLink: 'https://watcha.com/ko-KR/contents/mWLjlkd?utm_campaign=metadata&utm_source=google&utm_medium=search'},
-    { title: 'Poster 4 Title', mainPosterSrc: '7.jpg', characterImageSrc: '10.webp', characterIntroText: 'With unwavering bravery, character 4 faces incredible odds.', description: 'Bravery and determination drive character 4 as they face the challenges that lie ahead.',
-    netflixLink: 'https://www.netflix.com/kr/title/70019058?source=35',
-      wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011289&autoplay=y',
-      watchaLink: 'https://watcha.com/ko-KR/contents/mpWplgW?utm_campaign=metadata&utm_source=google&utm_medium=search'}
+    {
+      title: 'Poster 1 Title',
+      mainPosterSrc: '3.webp',
+      characterImageSrc: '2.jpg',
+      characterIntroText: 'This is the story of character 1, filled with courage and kindness.',
+      description: 'A tale of adventure and heartwarming friendship unfolds with character 1 as they brave unknown lands.',
+      netflixLink: 'https://www.netflix.com/kr/title/60027393?source=35',
+      wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011316&autoplay=y',
+    },
+    {
+      title: 'Poster 2 Title',
+      mainPosterSrc: '4.jpeg',
+      characterImageSrc: '6.jpg',
+      characterIntroText: 'Character 2 embarks on a mystical journey that changes everything.',
+      description: 'Follow character 2 as they embark on a journey filled with wonder and discovery.',
+      netflixLink: 'https://www.netflix.com/kr/title/70028883?source=35',
+      wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011324&autoplay=y',
+      watchaLink: 'https://watcha.com/ko-KR/contents/mJOV1RW?utm_campaign=metadata&utm_source=google&utm_medium=search',
+    },
+    {
+      title: 'Poster 3 Title',
+      mainPosterSrc: '.jpeg',
+      characterImageSrc: '.jpg',
+      characterIntroText: 'Character 3 embarks on a mystical journey that changes everything.',
+      description: 'Follow character 3 as they embark on a journey filled with wonder and discovery.',
+      netflixLink: '',
+      wavveLink: '',
+      watchaLink: '',
+    },
+    {
+      title: 'Poster 4 Title',
+      mainPosterSrc: '.jpeg',
+      characterImageSrc: '.jpg',
+      characterIntroText: 'Character 4 embarks on a mystical journey that changes everything.',
+      description: 'Follow character 4 as they embark on a journey filled with wonder and discovery.',
+      netflixLink: '',
+      wavveLink: '',
+      watchaLink: '',
+    },
+    {
+      title: 'Poster 5 Title',
+      mainPosterSrc: '.jpeg',
+      characterImageSrc: '.jpg',
+      characterIntroText: 'Character 5 embarks on a mystical journey that changes everything.',
+      description: 'Follow character 5 as they embark on a journey filled with wonder and discovery.',
+      netflixLink: '',
+      wavveLink: '',
+      watchaLink: '',
+    },
+    {
+      title: 'Poster 6 Title',
+      mainPosterSrc: '.jpeg',
+      characterImageSrc: '.jpg',
+      characterIntroText: 'Character 6 embarks on a mystical journey that changes everything.',
+      description: 'Follow character 6 as they embark on a journey filled with wonder and discovery.',
+      netflixLink: '',
+      wavveLink: '',
+      watchaLink: '',
+    },
+    // 추가 포스터 데이터...
   ];
 
-  // Function to change the main poster and update the poster grid order
+
   function changeMainPoster(index) {
-    // Get current main poster data
+    // 현재 메인 포스터 데이터 저장
     const mainPosterData = {
       title: document.getElementById('main-title').textContent,
       mainPosterSrc: document.getElementById('main-poster').src,
       characterImageSrc: document.getElementById('character-image').src,
       characterIntroText: document.getElementById('character-intro').textContent,
       description: document.getElementById('main-description').textContent,
-      link: document.getElementById('poster-link').href //링크 저장
+      netflixLink: document.getElementById('netflix-link').href,
+      wavveLink: document.getElementById('wavve-link').href,
+      watchaLink: document.getElementById('watcha-link').href,
     };
 
-    // Update the main poster with the selected poster's data
+    // 선택된 포스터로 메인 포스터 업데이트
     document.getElementById('main-title').textContent = posters[index].title;
     document.getElementById('main-poster').src = posters[index].mainPosterSrc;
     document.getElementById('character-image').src = posters[index].characterImageSrc;
     document.getElementById('character-intro').textContent = posters[index].characterIntroText;
     document.getElementById('main-description').textContent = posters[index].description;
-    // 포스터 정보 업데이트 시 링크도 변경
-    document.getElementById('poster-link').href = posters[index].link;
+    document.getElementById('netflix-link').href = posters[index].netflixLink;
+    document.getElementById('wavve-link').href = posters[index].wavveLink || '#';
+    document.getElementById('watcha-link').href = posters[index].watchaLink || '#';
 
-    // Update the posters array by removing the selected poster and appending the old main poster to the end
-    posters.push(mainPosterData); // Add the old main poster to the end
-    posters.splice(index, 1); // Remove the selected poster from its original position
+    // 포스터 배열 업데이트
+    posters.splice(index, 1); // 선택된 포스터 제거
+    posters.unshift(mainPosterData); // 기존 메인 포스터를 배열 앞에 추가
 
-    // Update poster grid images
+    // 그리드 이미지 갱신
     const posterGrid = document.getElementById('poster-grid').children;
-    for (let i = 0; i < posters.length; i++) {
-      posterGrid[i].src = posters[i].mainPosterSrc;
+    for (let i = 0; i < posterGrid.length; i++) {
+      if (posters[i]) {
+        posterGrid[i].src = posters[i].mainPosterSrc;
+      }
     }
   }
+
 </script>
 
 </body>
